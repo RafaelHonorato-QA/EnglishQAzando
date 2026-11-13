@@ -1,0 +1,112 @@
+{
+  "licao1": [
+    {
+      "question": "Olá",
+      "answer": "Hello"
+    },
+    {
+      "question": "Obrigado",
+      "answer": "Thank you"
+    },
+    {
+      "question": "Sim",
+      "answer": "Yes"
+    },
+    {
+      "question": "Não",
+      "answer": "No"
+    },
+    {
+      "question": "Por favor",
+      "answer": "Please"
+    }
+  ],
+  "licao2": [
+    {
+      "question": "Bom dia",
+      "answer": "Good morning"
+    },
+    {
+      "question": "Boa noite",
+      "answer": "Good night"
+    },
+    {
+      "question": "Tchau",
+      "answer": "Goodbye"
+    },
+    {
+      "question": "Desculpe",
+      "answer": "Sorry"
+    },
+    {
+      "question": "Tudo bem?",
+      "answer": "How are you?"
+    }
+  ],
+  "pratica": [
+    {
+      "question": "Olá",
+      "answer": "Hello"
+    },
+    {
+      "question": "Bom dia",
+      "answer": "Good morning"
+    },
+    {
+      "question": "Eu",
+      "answer": "I"
+    },
+    {
+      "question": "Obrigado",
+      "answer": "Thank you"
+    },
+    {
+      "question": "Sim",
+      "answer": "Yes"
+    }
+  ],
+  "licao3": [
+    {
+      "question": "Eles",
+      "answer": "They"
+    },
+    {
+      "question": "Isso/Isto",
+      "answer": "This"
+    },
+    {
+      "question": "Aquilo",
+      "answer": "That"
+    },
+    {
+      "question": "O que?",
+      "answer": "What?"
+    },
+    {
+      "question": "Quem?",
+      "answer": "Who?"
+    }
+  ],
+  "review": [
+    {
+      "question": "Olá",
+      "answer": "Hello"
+    },
+    {
+      "question": "Por favor",
+      "answer": "Please"
+    },
+    {
+      "question": "Você",
+      "answer": "You"
+    },
+    {
+      "question": "Bom dia",
+      "answer": "Good morning"
+    },
+    {
+      "question": "Eles",
+      "answer": "They"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "licao1": [
+    {
+      "question": "Olá",
+      "answer": "Thanks",
+      "correctAnswer": "Hello"
+    }
+  ],
+  "pratica": [
+    {
+      "question": "Olá",
+      "answer": "Thank you",
+      "correctAnswer": "Hello"
+    }
+  ],
+  "review": [
+    {
+      "question": "Olá",
+      "answer": "Goodbye",
+      "correctAnswer": "Hello"
+    }
+  ]
+}

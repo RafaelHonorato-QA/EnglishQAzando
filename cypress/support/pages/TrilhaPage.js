@@ -42,7 +42,7 @@ class TrilhaPage {
     shouldBeCompleted(unit, number) {
         this.stage(unit, number).within(() => {
             cy.contains('Completado').should('be.visible');
-            cy.get('.lucide-circle-check').should('exist');
+            cy.get('.lucide-circle-check').should('be.visible');
             cy.get('button').should('be.enabled');
         });
     }
@@ -79,6 +79,18 @@ class TrilhaPage {
         this.shouldBeAvailable(unit, number + 1);
     }
 
+   shouldShowIncorrectAnswer(correctAnswer) {
+    cy.get('li[role="status"][data-state="open"]')
+        .should('be.visible')
+        .within(() => {
+            cy.contains('div', 'Incorreto').should('be.visible');
+
+            cy.contains(
+                `A resposta correta é: ${correctAnswer}`
+            ).should('be.visible');
+        });
+    }
+
     startLessonOne() {
         cy.contains('button', 'Começar')
             .should('be.visible')
@@ -108,16 +120,25 @@ class TrilhaPage {
     }
 
     verifyAnswer() {
-        cy.contains('button', 'Verificar')
-            .should('be.enabled')
-            .click();
+    cy.contains('button', 'Verificar')
+        .should('be.enabled')
+        .click();
 
-        cy.contains('Correto!')
-            .should('be.visible');
+    cy.contains('p', 'Correto!')
+        .should('be.visible');
+}
 
-        cy.contains('Incorreto')
-            .should('not.exist');
-    }
+    verifyIncorrectAnswer(correctAnswer) {
+    cy.contains('button', 'Verificar')
+        .should('be.enabled')
+        .click();
+
+    cy.contains('p', 'Incorreto')
+        .should('be.visible');
+
+    cy.contains('span', `A resposta correta é:`)
+        .should('exist');
+} 
 
     continueToNextQuestion() {
         cy.contains('button', 'Continuar')

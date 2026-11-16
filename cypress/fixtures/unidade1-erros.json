@@ -1,12 +1,32 @@
 {
   "licao1": [
-    {
-      "question": "Olá",
-      "answer": "Thanks",
-      "correctAnswer": "Hello"
-    }
-  ],
-  "pratica": [
+  {
+    "question": "Olá",
+    "answer": "Thanks",
+    "correctAnswer": "Hello"
+  },
+  {
+    "question": "Obrigado",
+    "answer": "Please",
+    "correctAnswer": "Thank you"
+  },
+  {
+    "question": "Sim",
+    "answer": "Maybe",
+    "correctAnswer": "Yes"
+  },
+  {
+    "question": "Não",
+    "answer": "Maybe",
+    "correctAnswer": "No"
+  },
+  {
+    "question": "Por favor",
+    "answer": "Thanks",
+    "correctAnswer": "Please"
+  }
+],
+ "pratica": [
     {
       "question": "Olá",
       "answer": "Thank you",

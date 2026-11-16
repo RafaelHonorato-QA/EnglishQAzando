@@ -257,7 +257,7 @@ describe('Trilha do Inglês', function () {
 
     
 // CT03 - Validar XP com uma resposta incorreta
-it.only('CT03 - Desconto de XP por resposta incorreta', function () {
+it('CT03 - Desconto de XP por resposta incorreta', function () {
 
     const loginPage = new LoginPage();
     const trilhaPage = new TrilhaPage();
@@ -408,6 +408,63 @@ it.only('CT03 - Desconto de XP por resposta incorreta', function () {
         });
     });
 });
+
+
+it.only('CT04 - Validação de XP com todas as respostas incorretas', function () {
+
+    const loginPage = new LoginPage();
+    const trilhaPage = new TrilhaPage();
+
+    loginPage.visit();
+
+    cy.env(['email', 'password']).then((credentials) => {
+
+        loginPage.fillEmail(credentials.email);
+        loginPage.fillPassword(credentials.password);
+        loginPage.submit();
+
+        cy.location('pathname').should('not.eq', '/auth');
+
+        trilhaPage.visit();
+        trilhaPage.shouldBeLoaded();
+        trilhaPage.shouldHavePremiumAccess();
+
+        cy.fixture('unidade1-erros').then((errorData) => {
+
+            // =====================================
+            // LIÇÃO 1 - 0 XP
+            // =====================================
+
+            trilhaPage.shouldBeAvailable(1, 1);
+            trilhaPage.openStage(1, 1);
+            trilhaPage.startLessonOne();
+
+            errorData.licao1.forEach((question, index) => {
+
+                trilhaPage.selectAnswer(
+                    question.question,
+                    question.answer
+                );
+
+                trilhaPage.verifyIncorrectAnswer();
+
+                trilhaPage.shouldShowIncorrectAnswer(
+                    question.correctAnswer
+                );
+
+                if (index < errorData.licao1.length - 1) {
+                    trilhaPage.continueToNextQuestion();
+                } else {
+                    trilhaPage.finishLesson(0);
+                }
+            });
+
+        });
+    });
+});
+
+
+
 
 
 });

@@ -1,4 +1,3 @@
-
 import LoginPage from '../support/pages/LoginPage';
 import TrilhaPage from '../support/pages/TrilhaPage';
 

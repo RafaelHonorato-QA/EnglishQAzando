@@ -1,0 +1,155 @@
+
+{
+  "questions": [
+    {
+      "word": "happy",
+      "correctAnswer": "feliz",
+      "wrongAnswer": "triste"
+    },
+    {
+      "word": "dog",
+      "correctAnswer": "cachorro",
+      "wrongAnswer": "gato"
+    },
+    {
+      "word": "house",
+      "correctAnswer": "casa",
+      "wrongAnswer": "apartamento"
+    },
+    {
+      "word": "water",
+      "correctAnswer": "água",
+      "wrongAnswer": "refrigerante"
+    },
+    {
+      "word": "book",
+      "correctAnswer": "livro",
+      "wrongAnswer": "jornal"
+    },
+    {
+      "word": "car",
+      "correctAnswer": "carro",
+      "wrongAnswer": "moto"
+    },
+    {
+      "word": "friend",
+      "correctAnswer": "amigo",
+      "wrongAnswer": "primo"
+    },
+    {
+      "word": "school",
+      "correctAnswer": "escola",
+      "wrongAnswer": "trabalho"
+    },
+    {
+      "word": "food",
+      "correctAnswer": "comida",
+      "wrongAnswer": "bebida"
+    },
+    {
+      "word": "music",
+      "correctAnswer": "música",
+      "wrongAnswer": "livro"
+    },
+    {
+      "word": "phone",
+      "correctAnswer": "telefone",
+      "wrongAnswer": "computador"
+    },
+    {
+      "word": "family",
+      "correctAnswer": "família",
+      "wrongAnswer": "amigos"
+    },
+    {
+      "word": "work",
+      "correctAnswer": "trabalho",
+      "wrongAnswer": "escola"
+    },
+    {
+      "word": "beautiful",
+      "correctAnswer": "bonito",
+      "wrongAnswer": "grande"
+    },
+    {
+      "word": "computer",
+      "correctAnswer": "computador",
+      "wrongAnswer": "telefone"
+    },
+    {
+      "word": "money",
+      "correctAnswer": "dinheiro",
+      "wrongAnswer": "tempo"
+    },
+    {
+      "word": "coffee",
+      "correctAnswer": "café",
+      "wrongAnswer": "suco"
+    },
+    {
+      "word": "time",
+      "correctAnswer": "tempo",
+      "wrongAnswer": "relógio"
+    },
+    {
+      "word": "good",
+      "correctAnswer": "bom",
+      "wrongAnswer": "ruim"
+    },
+    {
+      "word": "night",
+      "correctAnswer": "noite",
+      "wrongAnswer": "tarde"
+    },
+    {
+      "word": "teacher",
+      "correctAnswer": "professor",
+      "wrongAnswer": "diretor"
+    },
+    {
+      "word": "city",
+      "correctAnswer": "cidade",
+      "wrongAnswer": "estado"
+    },
+    {
+      "word": "sun",
+      "correctAnswer": "sol",
+      "wrongAnswer": "estrela"
+    },
+    {
+      "word": "rain",
+      "correctAnswer": "chuva",
+      "wrongAnswer": "sol"
+    },
+    {
+      "word": "cold",
+      "correctAnswer": "frio",
+      "wrongAnswer": "quente"
+    },
+    {
+      "word": "love",
+      "correctAnswer": "amo",
+      "wrongAnswer": "odeio"
+    },
+    {
+      "word": "girl",
+      "correctAnswer": "menina",
+      "wrongAnswer": "menino"
+    },
+    {
+      "word": "boy",
+      "correctAnswer": "menino",
+      "wrongAnswer": "menina"
+    },
+    {
+      "word": "door",
+      "correctAnswer": "porta",
+      "wrongAnswer": "janela"
+    },
+    {
+      "word": "window",
+      "correctAnswer": "janela",
+      "wrongAnswer": "porta"
+    }
+  ]
+}

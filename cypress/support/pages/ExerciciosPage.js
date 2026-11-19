@@ -1,4 +1,6 @@
+
 class ExerciciosPage {
+
     visit() {
         cy.visit('/exercises');
     }
@@ -53,7 +55,7 @@ class ExerciciosPage {
     }
 
     shouldShowAnswerHistory() {
-        // Valida o histórico da resposta correta.
+        // Validar o histórico da resposta correta.
         cy.get('.bg-success\\/5')
             .should('be.visible')
             .within(() => {
@@ -67,7 +69,7 @@ class ExerciciosPage {
                     .should('be.visible');
             });
 
-        // Valida o histórico da resposta incorreta.
+        // Validar o histórico da resposta incorreta.
         cy.get('.bg-destructive\\/5')
             .should('be.visible')
             .within(() => {

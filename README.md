@@ -1,106 +1,151 @@
-EnglishQA
-Projeto de automação de testes end-to-end da plataforma English QAzando, desenvolvido com Cypress e JavaScript.
+EnglishQA 📚
+Projeto de automação de testes End-to-End (E2E) desenvolvido utilizando Cypress, com foco na validação de funcionalidades de uma plataforma de aprendizagem de inglês.
 
-O objetivo é validar fluxos de aprendizagem, comportamento das funcionalidades, persistência de progresso e resultados apresentados ao usuário.
-Tecnologias
+O projeto foi desenvolvido como parte de uma prática de Quality Assurance, com aplicação do padrão Page Object Model (POM), organização de testes por funcionalidade, utilização de fixtures e documentação de cenários com BDD.
+🌐 Sistema testado
+Plataforma de aprendizagem de inglês utilizada para a realização dos testes:
+
+https://english.qazando.com.br
+🎯 Objetivos do projeto
+Este projeto tem como objetivos:
+- Praticar automação de testes utilizando Cypress;
+- Desenvolver testes End-to-End;
+- Aplicar o padrão Page Object Model (POM);
+- Validar funcionalidades com base em regras de negócio;
+- Utilizar fixtures para organizar os dados de teste;
+- Documentar cenários utilizando BDD e Gherkin;
+- Verificar o comportamento da aplicação em diferentes situações;
+- Construir um projeto de portfólio na área de Quality Assurance.
+🛠️ Tecnologias utilizadas
 - JavaScript
-- Cypress 16.3
-- Node.js e npm
-- Page Object Model (POM)
-- Gherkin para documentação dos cenários BDD
-Estrutura do projeto
-
-EnglishQA/
-├── cypress/
-│   ├── e2e/
-│   │   ├── features/
+- Cypress
+- Node.js
+- npm
+- Git
+- GitHub
+- Gherkin
+🏗️ Estrutura do projeto
+EnglishQA
+│
+├── cypress
+│   ├── e2e
+│   │   ├── features
 │   │   │   ├── exercicios.feature
 │   │   │   ├── quiz.feature
 │   │   │   └── trilha.feature
+│   │   │
 │   │   ├── exercicios.cy.js
 │   │   ├── quiz.cy.js
 │   │   └── trilha.cy.js
-│   ├── fixtures/
+│   │
+│   ├── fixtures
 │   │   ├── exercicios.json
 │   │   ├── quiz.json
 │   │   ├── unidade1-erros.json
 │   │   └── unidade1.json
-│   ├── screenshots/
-│   └── support/
-│       ├── pages/
+│   │
+│   ├── screenshots
+│   │
+│   └── support
+│       ├── pages
 │       │   ├── ExerciciosPage.js
 │       │   ├── LoginPage.js
 │       │   ├── QuizPage.js
 │       │   └── TrilhaPage.js
+│       │
 │       ├── commands.js
 │       └── e2e.js
+│
 ├── cypress.config.js
 ├── package.json
-└── package-lock.json
-
-Arquivos locais de configuração e dependências, como node_modules, .env e cypress.env.json, não devem ser enviados ao repositório.
-Configuração
-1. Pré-requisitos
-- Node.js instalado
-- npm instalado
-2. Clonar o repositório
-git clone URL_DO_REPOSITORIO
-cd EnglishQA
-Substitua URL_DO_REPOSITORIO pelo endereço do repositório no GitHub.
-3. Instalar as dependências
-npm install
-4. Configurar as credenciais
-Os testes utilizam uma conta verificada com acesso à plataforma. Configure localmente as credenciais esperadas pelo projeto, usando as chaves email e password.
-
-Não compartilhe nem envie credenciais reais ao GitHub. Mantenha arquivos com dados sensíveis fora do controle de versão.
-5. Executar os testes
-Abrir a interface do Cypress:
-npx cypress open
-Executar os testes em modo headless:
-npx cypress run
-Suítes de testes
+├── package-lock.json
+└── README.md
+🧪 Funcionalidades automatizadas
 Exercícios
-Arquivo: cypress/e2e/exercicios.cy.js
-
-Cenários cobertos:
-- CT01: fluxo principal do exercício, com conclusão das 30 questões e validação da pontuação final.
-- CT02: salvamento automático do progresso após avançar e atualizar a página.
-- CT03: continuidade do exercício ao navegar para outra página e retornar.
-- CT04: reinício do exercício durante a execução e após a conclusão.
-- CT05: histórico de respostas corretas e incorretas.
-A fixture exercicios.json fornece as respostas utilizadas nos cenários.
+Cenários automatizados:
+- CT01: Validação do fluxo principal do exercício, com conclusão das 30 questões;
+- CT02: Validação do salvamento automático do progresso após atualizar a página;
+- CT03: Validação da continuidade do exercício após acessar outra página;
+- CT04: Validação da possibilidade de reiniciar o exercício durante e após sua conclusão;
+- CT05: Validação do histórico de respostas corretas e incorretas.
 Quiz
-Arquivo: cypress/e2e/quiz.cy.js
-
-Cenários cobertos:
-- CT01: finalização de uma tentativa em andamento.
-- CT02: conclusão das 30 questões com respostas corretas.
-- CT03: contabilização de acertos e erros durante o Quiz.
-- CT04: nova tentativa para melhorar a pontuação.
-- CT05: validação das alternativas e do avanço automático entre questões.
-A fixture quiz.json contém os dados das questões e as respostas utilizadas pela automação.
+Cenários automatizados:
+- CT01: Finalização de uma tentativa de Quiz em andamento;
+- CT02: Conclusão das 30 questões com respostas corretas;
+- CT03: Contabilização de acertos e erros durante o Quiz;
+- CT04: Realização de uma nova tentativa para melhorar a pontuação;
+- CT05: Validação das alternativas e do avanço automático entre questões.
 Trilha do Inglês
-Arquivo: cypress/e2e/trilha.cy.js
+Cenários automatizados:
+- CT01: Conclusão das cinco etapas da Unidade 1 com validação do XP recebido e da persistência do progresso;
+- CT03: Validação do desconto de XP após respostas incorretas;
+- CT04: Validação do XP recebido quando todas as respostas são incorretas.
+Observação: o CT02, que valida o desbloqueio sequencial das etapas da Unidade 1, está temporariamente desabilitado no código com it.skip e não faz parte dos testes executados.
+📝 Cenários BDD
+Os cenários foram documentados utilizando Gherkin, em arquivos .feature, organizados por funcionalidade.
+Funcionalidade	Arquivo
+Exercícios	exercicios.feature
+Quiz	quiz.feature
+Trilha do Inglês	trilha.feature
 
-Cenários implementados:
-- CT01: conclusão das cinco etapas da Unidade 1, com validação do XP recebido e da persistência do progresso.
-- CT02: desbloqueio sequencial das etapas da Unidade 1.
-- CT03: desconto de XP após resposta incorreta na Lição 1, na Prática e no Review.
-- CT04: validação do XP recebido quando todas as questões da Lição 1 são respondidas incorretamente.
-O CT02 está implementado, mas permanece temporariamente desabilitado com it.skip. Portanto, ele não faz parte da execução dos testes ativos.
 
-As fixtures unidade1.json e unidade1-erros.json fornecem os dados de questões e respostas corretas ou incorretas utilizados nos cenários da Trilha.
-Page Object Model
-O projeto utiliza Page Object Model para organizar as interações com as páginas da aplicação.
+Os arquivos .feature documentam os comportamentos esperados e as regras de negócio dos cenários. A execução automatizada apresentada neste projeto é realizada pelos arquivos Cypress .cy.js.
+📌 Boas práticas aplicadas
+Durante o desenvolvimento foram aplicadas algumas práticas de organização e manutenção dos testes:
 
-Os métodos de cada página ficam concentrados em cypress/support/pages/, enquanto os arquivos de teste em cypress/e2e/ descrevem os cenários e coordenam as ações e validações.
+✅ Page Object Model (POM) para separar métodos de interação com as páginas dos cenários de teste;
 
-Essa separação facilita a manutenção dos seletores e das interações, além de reduzir a repetição de código nos testes.
-BDD com Gherkin
-Os cenários também são documentados em arquivos .feature, organizados em cypress/e2e/features/.
+✅ Organização dos testes por funcionalidade;
 
-Essa documentação descreve o comportamento esperado da aplicação em linguagem próxima à regra de negócio e mantém os cenários identificados pelos mesmos códigos CT utilizados nos testes.
-Resultados
-As suítes de Exercícios, Quiz e Trilha foram executadas, e os testes ativos foram aprovados.
+✅ Utilização de fixtures para armazenar e reutilizar dados de teste;
 
-Há uma ressalva: o cenário CT02 da Trilha, embora implementado, está marcado com it.skip e não foi executado. Assim, o resultado positivo se refere aos testes ativos executados, não a esse cenário desabilitado.
+✅ Reutilização de métodos para ações e validações;
+
+✅ Seleção de respostas por texto visível, evitando depender da posição das alternativas;
+
+✅ Validação de mensagens, estados da interface e resultados apresentados;
+
+✅ Verificação da persistência do progresso após atualização da página;
+
+✅ Criação de cenários baseados em regras de negócio;
+
+✅ Documentação dos cenários utilizando Gherkin.
+▶️ Como executar o projeto
+Pré-requisitos
+É necessário possuir instalado:
+- Node.js
+- npm
+Clonar o repositório
+git clone URL_DO_REPOSITORIO
+Acesse a pasta do projeto:
+cd EnglishQA
+Instalar dependências
+npm install
+Configurar as credenciais
+Os testes de autenticação utilizam as variáveis email e password, acessadas pelo Cypress por meio de cy.env().
+
+Configure essas credenciais localmente, de acordo com a configuração de ambiente do projeto. Não compartilhe senhas nem envie arquivos com credenciais para o repositório.
+
+Arquivos locais como .env e cypress.env.json devem permanecer fora do controle de versão.
+Executar o Cypress
+Para abrir a interface do Cypress:
+npx cypress open
+Para executar os testes em modo headless:
+npx cypress run
+Após abrir a interface do Cypress, selecione a suíte desejada para execução.
+📊 Resultado dos testes
+As suítes de Exercícios, Quiz e Trilha foram executadas, e os testes ativos passaram.
+
+O cenário CT02 da Trilha permanece desabilitado com it.skip, portanto não está incluído nesse resultado.
+📚 Aprendizados
+Este projeto contribuiu para o desenvolvimento prático em:
+- Automação de testes End-to-End com Cypress;
+- Aplicação do padrão Page Object Model;
+- Organização de suítes de testes;
+- Utilização de fixtures;
+- Validação de regras de negócio;
+- Testes de persistência de dados e progresso;
+- Documentação de cenários com BDD e Gherkin;
+- Identificação e validação de comportamentos da aplicação.
+👨‍💻 Autor
+Rafael Honorato

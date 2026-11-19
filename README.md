@@ -9,6 +9,7 @@ Tecnologias
 - Page Object Model (POM)
 - Gherkin para documentação dos cenários BDD
 Estrutura do projeto
+
 EnglishQA/
 ├── cypress/
 │   ├── e2e/
@@ -36,6 +37,7 @@ EnglishQA/
 ├── cypress.config.js
 ├── package.json
 └── package-lock.json
+
 Arquivos locais de configuração e dependências, como node_modules, .env e cypress.env.json, não devem ser enviados ao repositório.
 Configuração
 1. Pré-requisitos

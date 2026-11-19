@@ -102,23 +102,24 @@ Observação: o CT02, que valida o desbloqueio sequencial das etapas da Unidade 
 📌 Boas práticas aplicadas
 Durante o desenvolvimento foram aplicadas algumas práticas de organização e manutenção dos testes:
 
-✅ Page Object Model (POM) para separar métodos de interação com as páginas dos cenários de teste;
+- Page Object Model (POM) para separar métodos de interação com as páginas dos cenários de teste;
 
-✅ Organização dos testes por funcionalidade;
+- Organização dos testes por funcionalidade;
 
-✅ Utilização de fixtures para armazenar e reutilizar dados de teste;
+- Utilização de fixtures para armazenar e reutilizar dados de teste;
 
-✅ Reutilização de métodos para ações e validações;
+- Reutilização de métodos para ações e validações;
 
-✅ Seleção de respostas por texto visível, evitando depender da posição das alternativas;
+- Seleção de respostas por texto visível, evitando depender da posição das alternativas;
 
-✅ Validação de mensagens, estados da interface e resultados apresentados;
+- Validação de mensagens, estados da interface e resultados apresentados;
 
-✅ Verificação da persistência do progresso após atualização da página;
+- Verificação da persistência do progresso após atualização da página;
 
-✅ Criação de cenários baseados em regras de negócio;
+- Criação de cenários baseados em regras de negócio;
 
-✅ Documentação dos cenários utilizando Gherkin.
+- Documentação dos cenários utilizando Gherkin.
+
 
 ▶️ Como executar o projeto
 
@@ -161,5 +162,7 @@ Este projeto contribuiu para o desenvolvimento prático em:
 - Testes de persistência de dados e progresso;
 - Documentação de cenários com BDD e Gherkin;
 - Identificação e validação de comportamentos da aplicação.
+
 👨‍💻 Autor
+
 Rafael Honorato

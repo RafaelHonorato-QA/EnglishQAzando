@@ -97,15 +97,7 @@ Cenários automatizados:
 - CT04: Validação do XP recebido quando todas as respostas são incorretas.
   
 Observação: o CT02, que valida o desbloqueio sequencial das etapas da Unidade 1, está temporariamente desabilitado no código com it.skip e não faz parte dos testes executados.
-📝 Cenários BDD
-Os cenários foram documentados utilizando Gherkin, em arquivos .feature, organizados por funcionalidade.
-Funcionalidade	Arquivo
-Exercícios	exercicios.feature
-Quiz	quiz.feature
-Trilha do Inglês	trilha.feature
 
-
-Os arquivos .feature documentam os comportamentos esperados e as regras de negócio dos cenários. A execução automatizada apresentada neste projeto é realizada pelos arquivos Cypress .cy.js.
 
 📌 Boas práticas aplicadas
 Durante o desenvolvimento foram aplicadas algumas práticas de organização e manutenção dos testes:

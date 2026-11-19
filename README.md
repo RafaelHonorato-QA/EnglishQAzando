@@ -1,12 +1,16 @@
 EnglishQA 📚
+
 Projeto de automação de testes End-to-End (E2E) desenvolvido utilizando Cypress, com foco na validação de funcionalidades de uma plataforma de aprendizagem de inglês.
 
-O projeto foi desenvolvido como parte de uma prática de Quality Assurance, com aplicação do padrão Page Object Model (POM), organização de testes por funcionalidade, utilização de fixtures e documentação de cenários com BDD.
+O projeto foi desenvolvido com aplicação do padrão Page Object Model (POM), organização de testes por funcionalidade, utilização de fixtures e documentação de cenários com BDD.
+
 🌐 Sistema testado
 Plataforma de aprendizagem de inglês utilizada para a realização dos testes:
 
 https://english.qazando.com.br
+
 🎯 Objetivos do projeto
+
 Este projeto tem como objetivos:
 - Praticar automação de testes utilizando Cypress;
 - Desenvolver testes End-to-End;
@@ -16,6 +20,7 @@ Este projeto tem como objetivos:
 - Documentar cenários utilizando BDD e Gherkin;
 - Verificar o comportamento da aplicação em diferentes situações;
 - Construir um projeto de portfólio na área de Quality Assurance.
+  
 🛠️ Tecnologias utilizadas
 - JavaScript
 - Cypress
@@ -24,43 +29,43 @@ Este projeto tem como objetivos:
 - Git
 - GitHub
 - Gherkin
+- 
 🏗️ Estrutura do projeto
-EnglishQA
-│
-├── cypress
-│   ├── e2e
-│   │   ├── features
-│   │   │   ├── exercicios.feature
-│   │   │   ├── quiz.feature
-│   │   │   └── trilha.feature
-│   │   │
-│   │   ├── exercicios.cy.js
-│   │   ├── quiz.cy.js
-│   │   └── trilha.cy.js
-│   │
-│   ├── fixtures
-│   │   ├── exercicios.json
-│   │   ├── quiz.json
-│   │   ├── unidade1-erros.json
-│   │   └── unidade1.json
-│   │
-│   ├── screenshots
-│   │
-│   └── support
-│       ├── pages
-│       │   ├── ExerciciosPage.js
-│       │   ├── LoginPage.js
-│       │   ├── QuizPage.js
-│       │   └── TrilhaPage.js
-│       │
-│       ├── commands.js
-│       └── e2e.js
-│
-├── cypress.config.js
-├── package.json
-├── package-lock.json
-└── README.md
+
+A organização dos arquivos está dividida em três partes principais: testes automatizados, dados de teste e arquivos de suporte.
+
+**EnglishQA/**
+- **cypress/**
+  - **e2e/**
+    - **features/**
+      - `exercicios.feature`
+      - `quiz.feature`
+      - `trilha.feature`
+    - `exercicios.cy.js`
+    - `quiz.cy.js`
+    - `trilha.cy.js`
+  - **fixtures/**
+    - `exercicios.json`
+    - `quiz.json`
+    - `unidade1-erros.json`
+    - `unidade1.json`
+  - **screenshots/**
+  - **support/**
+    - **pages/**
+      - `ExerciciosPage.js`
+      - `LoginPage.js`
+      - `QuizPage.js`
+      - `TrilhaPage.js`
+    - `commands.js`
+    - `e2e.js`
+- `cypress.config.js`
+- `package.json`
+- `package-lock.json`
+
+Arquivos locais como `.env`, `cypress.env.json` e `node_modules/` não são incluídos no repositório.
+
 🧪 Funcionalidades automatizadas
+
 Exercícios
 Cenários automatizados:
 - CT01: Validação do fluxo principal do exercício, com conclusão das 30 questões;
@@ -68,6 +73,7 @@ Cenários automatizados:
 - CT03: Validação da continuidade do exercício após acessar outra página;
 - CT04: Validação da possibilidade de reiniciar o exercício durante e após sua conclusão;
 - CT05: Validação do histórico de respostas corretas e incorretas.
+  
 Quiz
 Cenários automatizados:
 - CT01: Finalização de uma tentativa de Quiz em andamento;
@@ -75,11 +81,13 @@ Cenários automatizados:
 - CT03: Contabilização de acertos e erros durante o Quiz;
 - CT04: Realização de uma nova tentativa para melhorar a pontuação;
 - CT05: Validação das alternativas e do avanço automático entre questões.
+  
 Trilha do Inglês
 Cenários automatizados:
 - CT01: Conclusão das cinco etapas da Unidade 1 com validação do XP recebido e da persistência do progresso;
 - CT03: Validação do desconto de XP após respostas incorretas;
 - CT04: Validação do XP recebido quando todas as respostas são incorretas.
+  
 Observação: o CT02, que valida o desbloqueio sequencial das etapas da Unidade 1, está temporariamente desabilitado no código com it.skip e não faz parte dos testes executados.
 📝 Cenários BDD
 Os cenários foram documentados utilizando Gherkin, em arquivos .feature, organizados por funcionalidade.
@@ -90,6 +98,7 @@ Trilha do Inglês	trilha.feature
 
 
 Os arquivos .feature documentam os comportamentos esperados e as regras de negócio dos cenários. A execução automatizada apresentada neste projeto é realizada pelos arquivos Cypress .cy.js.
+
 📌 Boas práticas aplicadas
 Durante o desenvolvimento foram aplicadas algumas práticas de organização e manutenção dos testes:
 
@@ -110,13 +119,15 @@ Durante o desenvolvimento foram aplicadas algumas práticas de organização e m
 ✅ Criação de cenários baseados em regras de negócio;
 
 ✅ Documentação dos cenários utilizando Gherkin.
+
 ▶️ Como executar o projeto
+
 Pré-requisitos
 É necessário possuir instalado:
 - Node.js
 - npm
 Clonar o repositório
-git clone URL_DO_REPOSITORIO
+git clone https://github.com/RafaelHonorato-QA/EnglishQAzando
 Acesse a pasta do projeto:
 cd EnglishQA
 Instalar dependências
@@ -133,10 +144,12 @@ npx cypress open
 Para executar os testes em modo headless:
 npx cypress run
 Após abrir a interface do Cypress, selecione a suíte desejada para execução.
+
 📊 Resultado dos testes
 As suítes de Exercícios, Quiz e Trilha foram executadas, e os testes ativos passaram.
 
 O cenário CT02 da Trilha permanece desabilitado com it.skip, portanto não está incluído nesse resultado.
+
 📚 Aprendizados
 Este projeto contribuiu para o desenvolvimento prático em:
 - Automação de testes End-to-End com Cypress;

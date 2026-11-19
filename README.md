@@ -29,7 +29,15 @@ Este projeto tem como objetivos:
 - Git
 - GitHub
 - Gherkin
-- 
+
+ 📋 Casos de teste em BDD
+
+Os cenários de teste foram documentados utilizando Gherkin, seguindo a estrutura Given, When e Then.
+
+- [Exercícios](cypress/e2e/features/exercicios.feature)
+- [Quiz](cypress/e2e/features/quiz.feature)
+- [Trilha](cypress/e2e/features/trilha.feature)
+ 
 🏗️ Estrutura do projeto
 
 A organização dos arquivos está dividida em três partes principais: testes automatizados, dados de teste e arquivos de suporte.

@@ -145,7 +145,8 @@ Para executar os testes em modo headless:
 npx cypress run
 Após abrir a interface do Cypress, selecione a suíte desejada para execução.
 
-📊 Resultado dos testes
+📊 Resultado dos testes:
+
 As suítes de Exercícios, Quiz e Trilha foram executadas, e os testes ativos passaram.
 
 O cenário CT02 da Trilha permanece desabilitado com it.skip, portanto não está incluído nesse resultado.
